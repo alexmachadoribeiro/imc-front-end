@@ -12,7 +12,7 @@ imc.addEventListener('click', () => {
     let altura  = document.querySelector('#altura').value.replace(',', '.');
     let result  = document.querySelector('#result');
     let diag    = document.querySelector('#diag');
-    let imcImg  = document.querySelector('#imc-img');
+    let imcImg  = document.createElement('img');
     let imc     = peso/Math.pow(altura, 2);
 
     // exibe o resultado do IMC na tela
@@ -32,6 +32,7 @@ imc.addEventListener('click', () => {
         : 'Você está com obesidade mórbida. Procure um médico.'
     );
 
-    imcImg.innerHTML    = '<img src="../imagens/Tabela-IMC-2.jpg" alt="Tabela do IMC de acordo com a OMS." />';
+    imcImg.src = '../imagens/imc.jpg';
+    document.querySelector('#imc-img').appendChild(imcImg);
 
 });

@@ -12,12 +12,14 @@ imc.addEventListener('click', () => {
     let altura  = document.querySelector('#altura').value.replace(',', '.');
     let result  = document.querySelector('#result');
     let diag    = document.querySelector('#diag');
+    let imcImg  = document.querySelector('#imc-img');
     let imc     = peso/Math.pow(altura, 2);
 
     // exibe o resultado do IMC na tela
     result.innerHTML    = imc.toFixed(2);
+
     diag.innerHTML      = (
-        imc < 18.5 
+        imc < 18.5
         ? 'Você está abaixo do peso.'
         : imc < 25
         ? 'Você está no seu peso ideal.'
@@ -29,5 +31,7 @@ imc.addEventListener('click', () => {
         ? 'Você está com obesidade severa.'
         : 'Você está com obesidade mórbida. Procure um médico.'
     );
+
+    imcImg.innerHTML    = '<img src="../imagens/Tabela-IMC-2.jpg" alt="Tabela do IMC de acordo com a OMS." />';
 
 });

@@ -18,17 +18,19 @@ imc.addEventListener('click', () => {
     result.innerHTML    = imc.toFixed(2);
 
     diag.innerHTML      = (
-        imc < 18.5
-        ? 'Você está abaixo do peso.'
+        imc < 16.9
+        ? 'Magreza severa.'
+        : imc < 18.5
+        ? 'Abaixo do peso.'
         : imc < 25
-        ? 'Você está no seu peso ideal.'
+        ? 'Peso normal.'
         : imc < 30
-        ? 'Você está acima do peso.'
+        ? 'Acima do peso.'
         : imc < 35
-        ? 'Você está obeso.'
+        ? 'Obesidade I.'
         : imc < 40
-        ? 'Você está com obesidade severa.'
-        : 'Você está com obesidade mórbida. Procure um médico.'
+        ? 'Obesidade II.'
+        : 'Obesidade mórbida.'
     );
 
 });

@@ -44,39 +44,85 @@
     <!-- corpo da página -->
     <main class="mt-5">
         <div class="container">
-            <div class="d-flex justify-content-center">
-                <form>
-                    <section class="row">
-                        <div class="mb-3">
-                            <label for="peso" class="form-label">Peso em kg</label>
-                            <input type="number" step=".01" class="form-control input" id="peso" placeholder="00,00">
-                        </div>
-                    </section>
-                    <section class="row">
-                        <div class="mb-3">
-                            <label for="altura" class="form-label">Altura em metros</label>
-                            <input type="number" step=".01" class="form-control input" id="altura" placeholder="0,00">
-                        </div>
-                    </section>
-                    <section class="row mt-5">
-                        <div class="mb-3">
-                            <button type="submit" class="btn btn-primary col-12">Calcular IMC</button>
-                        </div>
-                    </section>
-                </form>
-            </div>
-            <hr />
-            <div class="d-flex justify-content-center">
-                <h3>Seu IMC é:</h3>
-            </div>
-            <div class="d-flex justify-content-center">
-                <h2 id="result"></h2>
-            </div>
-            <div class="d-flex justify-content-center">
-                <h3 id="diag"></h3>
-            </div>
-            <div class="d-flex justify-content-center mt-5">
-                <img src="imagens/imc.jpg" class="img-fluid" alt="Tabela do IMC de acordo com a OMS." />
+            <div class="row">
+                <section class="col-md-4 col-12">
+                    <div class="d-flex justify-content-center">
+                        <h3>Calcule seu IMC</h3>
+                    </div>
+                    <div class="d-flex justify-content-center mt-5">
+                        <form>
+                            <section class="row">
+                                <div class="mb-3">
+                                    <label for="peso" class="form-label">Peso em kg</label>
+                                    <input type="number" step=".01" class="form-control input" id="peso" placeholder="00,00">
+                                </div>
+                            </section>
+                            <section class="row">
+                                <div class="mb-3">
+                                    <label for="altura" class="form-label">Altura em metros</label>
+                                    <input type="number" step=".01" class="form-control input" id="altura" placeholder="0,00">
+                                </div>
+                            </section>
+                            <section class="row mt-5">
+                                <div class="mb-3">
+                                    <button type="submit" class="btn btn-primary col-12 mb-5">Calcular IMC</button>
+                                </div>
+                            </section>
+                        </form>
+                    </div>
+                </section>
+                <section class="col-md-4 col-12">
+                    <div class="d-flex justify-content-center">
+                        <h3>Seu IMC é:</h3>
+                    </div>
+                    <div class="d-flex justify-content-center mt-5">
+                        <h2 id="result">????</h2>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <h3 id="diag"></h3>
+                    </div>
+                </section>
+                <section class="col-md-4 col-12">
+                    <div class="d-flex justify-content-center">
+                        <h3>Tabela da OMS</h3>
+                    </div>
+                    <div class="d-flex justify-content-center mt-5">
+                        <table>
+                            <tr>
+                                <th>IMC</th>
+                                <th>Classificação</th>
+                            </tr>
+                            <tr>
+                                <td>Menor que 16,9</td>
+                                <td>Magreza severa</td>
+                            </tr>
+                            <tr>
+                                <td>Menor que 18,5</td>
+                                <td>Abaixo do peso</td>
+                            </tr>
+                            <tr>
+                                <td>Entre 18,5 e 24,9</td>
+                                <td>Peso normal</td>
+                            </tr>
+                            <tr>
+                                <td>Entre 25 e 29,9</td>
+                                <td>Acima do peso</td>
+                            </tr>
+                            <tr>
+                                <td>Entre 30 e 34,9</td>
+                                <td>Obesidade I</td>
+                            </tr>
+                            <tr>
+                                <td>Entre 35 e 39,9</td>
+                                <td>Obesidade II</td>
+                            </tr>
+                            <tr>
+                                <td>40 ou mais</td>
+                                <td>Obesidade mórbida</td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
             </div>
         </div>
     </main>
